@@ -1,0 +1,41 @@
+.headerContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    border-bottom: 1px solid #ddd;
+    width: fit-content;
+    padding: 20px 0;
+}
+
+.title {
+    font-size: 64px;
+    margin-bottom: 20px;
+    color: #fff;
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fbc2eb, #e5eeff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.projectsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+    gap: 20px;
+    align-items: start;
+}
+
+.projectCard:nth-child(odd) {
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .projectsGrid {
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    }
+}

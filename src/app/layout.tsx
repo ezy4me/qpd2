@@ -3,6 +3,7 @@ import { Inter_Tight } from "next/font/google";
 import "./globals.scss";
 import Header from "@/components/common/Header/Header";
 import Footer from "@/components/common/Footer/Footer";
+import BackgroundLines from "@/components/common/BackgroundLines/BackgroundLines";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -20,8 +21,11 @@ export default function RootLayout({
     <html lang="en">
       <body className={interTight.className}>
         <Header />
+
+        <BackgroundLines />
+
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );

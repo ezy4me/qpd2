@@ -1,13 +1,12 @@
 .pageContainer {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: calc(100vh - 80px); /* Учитываем высоту шапки или других фиксированных элементов */
-    padding: 20px;
+    flex: 1;
+    min-height: calc(100vh);
+    padding-top: 80px;
 }
 
 .pageContent {
     text-align: center;
-    padding: 40px;
-    border-radius: 8px;
+    width: 100%;
+
 }

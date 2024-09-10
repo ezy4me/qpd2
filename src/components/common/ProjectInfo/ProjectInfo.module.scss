@@ -1,0 +1,106 @@
+.projectInfo {
+    padding: 120px 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.title {
+    font-size: 64px;
+    margin-bottom: 60px;
+    color: #fff;
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fbc2eb, #e5eeff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.body {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 40px;
+}
+
+.technologies {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.technologiesItem {
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.price {
+    .priceText {
+        font-size: 24px;
+        color: #fbc2eb;
+    }
+
+    .time {
+        font-size: 18px;
+        color: #fbc2eb;
+    }
+}
+
+.tags {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    .tag {
+        background: #fbc2eb;
+        color: #000000;
+        border-radius: 8px;
+        padding: 12px;
+        text-align: center;
+    }
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+
+    .text {
+        color: #ffffff;
+        font-size: 18px;
+        text-align: start;
+    }
+}
+
+.projectImages {
+    position: relative;
+    width: 100%;
+    height: 600px; // Adjust height as needed
+}
+
+.mySwiper {
+    width: 100%;
+    height: 100%;
+}
+
+.projectImage {
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.projectImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+

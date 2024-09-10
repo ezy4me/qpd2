@@ -1,6 +1,5 @@
 import HeroSection from "@/components/common/HeroSection/HeroSection";
 import styles from "./page.module.scss";
-import BackgroundLines from "@/components/common/BackgroundLines/BackgroundLines";
 import { ProjectsGrid } from "@/components/common/ProjectsGrid/ProjectsGrid";
 import FAQ from "@/components/common/FAQ/FAQ";
 import QualitySection from "@/components/common/QualitySection/QualitySection";
@@ -32,7 +31,6 @@ const teamMembers = [
 export default function Home() {
   return (
     <div className={styles.page}>
-      <BackgroundLines />
       <main className={styles.main}>
         <HeroSection />
         <QualitySection />
