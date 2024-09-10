@@ -1,0 +1,157 @@
+.popular {
+    padding: 120px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+.title {
+    font-size: 64px;
+    margin-bottom: 60px;
+    color: #fff;
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fbc2eb, #e5eeff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+}
+
+.listItem {
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    width: 100%;
+    min-height: 320px;
+    display: flex;
+    border-radius: 32px;
+    overflow: hidden;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+    background-size: 200% 200%;
+    animation: rotateGradient 3s linear infinite;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    }
+}
+
+.cardDivider {
+    width: 2px;
+    background: #ffffff;
+}
+
+.cardContent {
+    padding: 1.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cardTitle {
+    color: #ffffff;
+    font-size: 40px;
+}
+
+.cardActions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cardTime {
+    display: flex;
+    flex-direction: column;
+
+    p {
+        margin: 0;
+        font-size: 32px;
+        color: #ec90ff;
+    }
+}
+
+.cardDescription {
+    padding: 1.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.description {
+    font-size: 20px;
+    color: #ffffff;
+}
+
+@media (max-width: 1140px) {
+    .cardActions {
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 24px;
+    }
+}
+
+@media (max-width: 900px) {
+    .card {
+        flex-direction: column;
+    }
+
+    .cardContent {
+        gap: 24px;
+    }
+
+    .cardActions {
+        flex-direction: row;
+        align-items: center !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .cardTitle {
+        font-size: 24px !important;
+    }
+
+    .cardContent {
+        gap: 24px;
+    }
+
+    .cardActions {
+        flex-direction: column-reverse;
+        align-items: flex-start !important;
+        .button {
+            width: 100%;
+        }
+    }
+
+    .cardTime {
+        width: 100%;
+        text-align: end;
+    }
+}
+
+@keyframes rotateGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}

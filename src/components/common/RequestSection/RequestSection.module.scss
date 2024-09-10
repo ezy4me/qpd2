@@ -1,0 +1,54 @@
+.request {
+  min-height: 100vh;
+  padding: 120px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden; 
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 40%; 
+    height: 40%;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.507); 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: rotateCircle 10s infinite linear; 
+    z-index: -1; 
+  }
+
+  .title,
+  .description,
+  .button {
+    position: relative;
+    z-index: 1; 
+  }
+}
+
+@keyframes rotateCircle {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.title {
+  margin-bottom: 60px;
+  color: #ffffff;
+  font-size: 36px;
+}
+
+.description {
+  margin-bottom: 40px;
+  font-size: 24px;
+  text-transform: lowercase;
+  color: #ffffff;
+}

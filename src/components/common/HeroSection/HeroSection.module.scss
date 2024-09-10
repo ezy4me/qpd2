@@ -1,0 +1,48 @@
+.hero {
+    height: calc(100vh - 80px - 40px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    text-align: center;
+    position: relative;
+}
+
+.heroContent {
+    position: relative;
+    z-index: 1;
+}
+
+.companyName {
+    font-size: 128px; 
+    font-weight: bold;
+    color: #fff;
+    margin: 0;
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fbc2eb, #e5eeff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.tagline {
+    font-size: 36px;
+    font-weight: 200;
+    color: #bbbbbb;
+    margin-top: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fbc2eb, #e5eeff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientAnimation 1s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 200% 200%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}

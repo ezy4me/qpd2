@@ -1,95 +1,47 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import HeroSection from "@/components/common/HeroSection/HeroSection";
+import styles from "./page.module.scss";
+import BackgroundLines from "@/components/common/BackgroundLines/BackgroundLines";
+import { ProjectsGrid } from "@/components/common/ProjectsGrid/ProjectsGrid";
+import FAQ from "@/components/common/FAQ/FAQ";
+import QualitySection from "@/components/common/QualitySection/QualitySection";
+import RequestSection from "@/components/common/RequestSection/RequestSection";
+import PopularCases from "@/components/common/PopularCases/PopularCases";
+import TeamSection from "@/components/common/TeamSection/TeamSection";
+
+const teamMembers = [
+  {
+    name: "Алиса Джонсон",
+    role: "Ведущий разработчик",
+    photo: "/images/panda-bear.png",
+    bio: "Алиса имеет более 10 лет опыта в разработке программного обеспечения и специализируется на фронтенд-технологиях.",
+  },
+  {
+    name: "Боб Смит",
+    role: "Бэкенд-разработчик",
+    photo: "/images/dinosaur.png",
+    bio: "Боб является экспертом в серверных технологиях и обладает солидным опытом в создании масштабируемых систем.",
+  },
+  {
+    name: "Чарли Браун",
+    role: "UI/UX дизайнер",
+    photo: "/images/bird.png",
+    bio: "Чарли сосредоточен на создании интуитивно понятных и привлекательных пользовательских интерфейсов с острым взглядом на дизайн.",
+  },
+];
 
 export default function Home() {
   return (
     <div className={styles.page}>
+      <BackgroundLines />
       <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
+        <HeroSection />
+        <QualitySection />
+        <ProjectsGrid />
+        <PopularCases />
+        <TeamSection members={teamMembers} />
+        <RequestSection />
+        <FAQ />
       </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
     </div>
   );
 }
