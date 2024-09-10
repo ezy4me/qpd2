@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
 import styles from "./RequestSection.module.scss";
 import Modal from "@/components/ui/Modal/Modal";
 import Button from "@/components/ui/Button/Button";
