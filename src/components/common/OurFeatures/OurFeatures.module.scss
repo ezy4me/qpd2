@@ -1,0 +1,183 @@
+.features {
+    width: 100%;
+}
+
+.title {
+    font-size: 4rem;
+    z-index: 1;
+    color: #fff;
+    font-weight: 900;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    letter-spacing: 1rem;
+    background: #000;
+    padding: 10px;
+    height: 100%;
+    text-align: center;
+}
+
+@media (min-width: 1140px) {
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        background: #000;
+    }
+
+   
+
+    .list {
+        display: flex; /* Flex для экранов больше 1140px */
+        width: 100%;
+        gap: 10px; /* Расстояние между элементами */
+    }
+
+    .item {
+        position: relative;
+        flex: 1; /* Все элементы равной ширины */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        height: 100dvh;
+        cursor: pointer;
+        transition: flex 0.3s ease-in-out; /* Плавный переход */
+
+        &::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: #fbc2eb;
+            opacity: 0.8;
+        }
+
+        &:hover {
+            flex: 2; /* Эффект увеличения ширины при наведении */
+        }
+    }
+}
+
+/* Для экранов менее 1140px используем grid */
+@media (max-width: 1140px) {
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        background: #000;
+    }
+
+    .list {
+        display: grid; /* Grid для экранов меньше 1140px */
+        grid-template-columns: repeat(2, 1fr); /* Два элемента в строке */
+        grid-template-rows: auto;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .item {
+        height: 50vh; /* Уменьшаем высоту для планшетов */
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        cursor: pointer;
+
+        &::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: #fbc2eb;
+            opacity: 0.8;
+        }
+    }
+}
+
+/* Для экранов меньше 768px */
+@media (max-width: 768px) {
+    .list {
+        grid-template-columns: repeat(2, 1fr); /* Два элемента в строке */
+    }
+
+    .item {
+        height: 40vh; /* Уменьшаем высоту для мобильных */
+    }
+
+    .title {
+        font-size: 1.5rem; /* Уменьшаем размер шрифта заголовка */
+        letter-spacing: normal;
+    }
+}
+
+/* Для экранов меньше 480px */
+@media (max-width: 480px) {
+    .list {
+        grid-template-columns: repeat(1, 1fr); /* Один элемент в строке */
+    }
+
+    .item {
+        height: 30vh; /* Ещё меньше для экранов с шириной до 480px */
+    }
+}
+
+/* Общие стили */
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter 0.3s ease;
+    filter: blur(10px);
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    background: rgba(0, 0, 0, 1);
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.title {
+    font-size: 2rem;
+    z-index: 1;
+    color: #fff;
+    font-weight: 900;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    letter-spacing: 1rem;
+    background: #000;
+    padding: 10px;
+    height: 100%;
+    text-align: center;
+}
+
+.description {
+    font-size: 20px;
+}
+
+.item:hover .image {
+    filter: blur(0);
+}
+
+.item:hover .overlay {
+    opacity: 1;
+}

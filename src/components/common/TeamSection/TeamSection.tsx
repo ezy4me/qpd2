@@ -10,16 +10,33 @@ interface TeamMember {
   bio?: string;
 }
 
-interface TeamSectionProps {
-  members: TeamMember[];
-}
+const teamMembers: TeamMember[] = [
+  {
+    name: "Алиса Джонсон",
+    role: "Ведущий разработчик",
+    photo: "/images/panda-bear.png",
+    bio: "Алиса имеет более 10 лет опыта в разработке программного обеспечения и специализируется на фронтенд-технологиях.",
+  },
+  {
+    name: "Боб Смит",
+    role: "Бэкенд-разработчик",
+    photo: "/images/dinosaur.png",
+    bio: "Боб является экспертом в серверных технологиях и обладает солидным опытом в создании масштабируемых систем.",
+  },
+  {
+    name: "Чарли Браун",
+    role: "UI/UX дизайнер",
+    photo: "/images/bird.png",
+    bio: "Чарли сосредоточен на создании интуитивно понятных и привлекательных пользовательских интерфейсов с острым взглядом на дизайн.",
+  },
+];
 
-const TeamSection: React.FC<TeamSectionProps> = ({ members }) => {
+const TeamSection: React.FC = () => {
   return (
     <section className={styles.teamSection}>
       <h2 className={styles.title}>Наша команда</h2>
       <div className={styles.members}>
-        {members.map((member, index) => (
+        {teamMembers.map((member, index) => (
           <div key={index} className={styles.memberCard}>
             {member.photo && (
               <img

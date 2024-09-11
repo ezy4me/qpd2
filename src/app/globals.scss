@@ -56,3 +56,10 @@ h1 {
 .swiper-pagination-bullet-active {
   background: #ffffff !important;
 }
+
+.swiper-pagination {
+  background: #000000 !important;
+  opacity: 0.5;
+  bottom: 0 !important;
+  padding: 8px 0;
+}

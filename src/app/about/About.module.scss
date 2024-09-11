@@ -7,6 +7,7 @@
     border-bottom: 1px solid #ddd;
     width: fit-content;
     padding: 20px 0;
+    gap: 48px;
 }
 
 .title {
@@ -16,27 +17,18 @@
     background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fbc2eb, #e5eeff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+
+    span {
+        color: #fbc2eb;
+    }
 }
 
 .subtitle {
     font-size: 24px;
     color: #ffffff;
-}
+    text-align: start;
 
-.projectsGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
-    gap: 20px;
-    align-items: start;
-    padding: 20px 0;
-}
-
-.projectCard:nth-child(odd) {
-    transform: translateY(0);
-}
-
-@media (max-width: 768px) {
-    .projectsGrid {
-        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    span {
+        color: #fbc2eb;
     }
 }
