@@ -13,14 +13,27 @@
 }
 
 .items {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: auto;
+    gap: 20px;
+    width: 100%;
+
+    @media (max-width: 1200px) {
+        grid-template-columns: repeat(2, 1fr); 
+
+        .item:nth-child(3) {
+            grid-column: 1 / -1; 
+        }
+    }
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
 }
 
 .item {
-    flex: 1;
-    max-width: 300px;
     width: 100%;
     padding: 30px;
     background: rgba(255, 255, 255, 0.05);

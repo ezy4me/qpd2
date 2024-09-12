@@ -11,7 +11,6 @@ import TeamSection from "@/components/common/TeamSection/TeamSection";
 export default function Home() {
   return (
     <div className={styles.page}>
-      <main className={styles.main}>
         <HeroSection />
         <QualitySection />
         <ProjectsGrid />
@@ -19,7 +18,6 @@ export default function Home() {
         <TeamSection />
         <RequestSection />
         <FAQ />
-      </main>
     </div>
   );
 }

@@ -158,7 +158,10 @@ export const ServicesGrid = () => {
               className={styles.serviceCard}
               onClick={() => handleViewService(service.id)}>
               <h2>{service.title}</h2>
-              <p className={styles.serviceDescription}>{service.description}</p>
+              <div className={styles.serviceDescription}>
+                <p>{service.title}</p>
+                <p>{service.description}</p>
+              </div>
             </div>
           ))}
         </div>

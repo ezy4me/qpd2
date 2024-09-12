@@ -18,22 +18,22 @@ const SideBarNav: React.FC<SideBarNavProps> = ({ isOpen, toggleMenu }) => {
         <nav>
           <ul>
             <li>
-              <Link href="/" passHref>
+              <Link href="/" passHref onClick={toggleMenu}>
                 Главная
               </Link>
             </li>
             <li>
-              <Link href="/about" passHref>
+              <Link href="/about" passHref onClick={toggleMenu}>
                 О студии
               </Link>
             </li>
             <li>
-              <Link href="/services" passHref>
+              <Link href="/services" passHref onClick={toggleMenu}>
                 Наши услуги
               </Link>
             </li>
             <li>
-              <Link href="/portfolio" passHref>
+              <Link href="/portfolio" passHref onClick={toggleMenu}>
                 Наши проекты
               </Link>
             </li>
