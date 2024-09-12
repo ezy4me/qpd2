@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
     <footer className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.info}>
-          <h2 className={styles.logo}>Quality Product Design</h2>
+          <h2 className={styles.logo}>QPD</h2>
           <p className={styles.description}>
             Мы являемся креативным агентством, которое предоставляет
             высококачественные решения в области веб-дизайна и разработки для
