@@ -31,7 +31,7 @@ const FAQ: React.FC = () => {
   return (
     <div className={styles.faq}>
       <div className={styles.container}>
-        <h2>
+        <h2 className="title">
           Часто задаваемые <span>вопросы</span>
         </h2>
         <div className={styles.list}>

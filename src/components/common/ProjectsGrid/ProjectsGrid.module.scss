@@ -1,6 +1,6 @@
 .container {
-    width: 100%;
-    padding: 120px 0;
+    width: 100%; 
+    display: flex;
 }
 
 .grid {
@@ -8,6 +8,7 @@
     gap: 32px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, auto);
+    height: 100%;
 
     @media (max-width: 1200px) {
         grid-template-columns: repeat(2, 1fr);
@@ -17,14 +18,12 @@
     @media (max-width: 768px) {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(5, auto);
-        padding: 60px 20px;
     }
 }
 
 .project {
     background-size: cover;
     background-position: center;
-    // border-radius: 32px;
     height: 600px;
     position: relative;
     overflow: hidden;
@@ -106,7 +105,6 @@
         &:nth-child(5) {
             grid-column: 1 / 2;
             grid-row: auto;
-            // border-radius: 32px;
         }
     }
 

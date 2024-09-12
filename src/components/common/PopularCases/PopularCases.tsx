@@ -3,6 +3,7 @@
 import React from "react";
 import styles from "./PopularCases.module.scss";
 import Button from "@/components/ui/Button/Button";
+import ScrollAnimation from "@/components/ui/ScrollAnimation/ScrollAnimation";
 
 const popularCasesData = [
   {
@@ -35,38 +36,40 @@ const popularCasesData = [
 
 const PopularCases = () => {
   return (
-    <div className={styles.popular}>
-      <h2 className={styles.title}>Популярное</h2>
+    <section className={styles.popular}>
+      <h2 className='title'>Популярное</h2>
       <div className={styles.container}>
         <div className={styles.list}>
           {popularCasesData.map((caseItem, index) => (
             <div key={index} className={styles.listItem}>
-              <div className={styles.card}>
-                <div className={styles.cardContent}>
-                  <h3 className={styles.cardTitle}>{caseItem.title}</h3>
-                  <div className={styles.cardActions}>
-                    <Button size="large" variant="outlined">
-                      Хочу
-                    </Button>
-                    <div className={styles.cardTime}>
-                      <p>{caseItem.price}</p>
-                      <p>{caseItem.time}</p>
+              <ScrollAnimation>
+                <div className={styles.card}>
+                  <div className={styles.cardContent}>
+                    <h3 className={styles.cardTitle}>{caseItem.title}</h3>
+                    <div className={styles.cardActions}>
+                      <Button size="large" variant="outlined">
+                        Хочу
+                      </Button>
+                      <div className={styles.cardTime}>
+                        <p>{caseItem.price}</p>
+                        <p>{caseItem.time}</p>
+                      </div>
                     </div>
                   </div>
+                  <div className={styles.cardDivider}></div>
+                  <div className={styles.cardDescription}>
+                    <p className={styles.description}>{caseItem.description}</p>
+                    <p className={styles.description}>
+                      {caseItem.detailedDescription}
+                    </p>
+                  </div>
                 </div>
-                <div className={styles.cardDivider}></div>
-                <div className={styles.cardDescription}>
-                  <p className={styles.description}>{caseItem.description}</p>
-                  <p className={styles.description}>
-                    {caseItem.detailedDescription}
-                  </p>
-                </div>
-              </div>
+              </ScrollAnimation>
             </div>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -29,6 +29,11 @@ main {
   padding: 0 40px;
 }
 
+section {
+  padding: 120px 0;
+  text-align: center;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -65,4 +70,48 @@ h1 {
   opacity: 0.5;
   bottom: 0 !important;
   padding: 8px 0;
+}
+
+.title {
+  font-size: 64px;
+  margin-bottom: 60px;
+  color: #fff;
+  background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fbc2eb, #e5eeff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 0 20px;
+  }
+
+  section {
+    padding: 60px 0;
+  }
+
+  .title {
+    font-size: 48px;
+    margin-bottom: 40px;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  main {
+    padding: 0 10px;
+  }
+
+  section {
+    padding: 40px 0;
+  }
+
+  .title {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
 }

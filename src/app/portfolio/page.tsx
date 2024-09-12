@@ -85,10 +85,10 @@ const projects = [
 
 const Portfolio: React.FC = () => {
   return (
-    <div className={styles.pageContainer}>
+    <section className={styles.pageContainer}>
       <div className={styles.pageContent}>
         <div className={portfolio.headerContainer}>
-          <h1 className={portfolio.title}>КЕЙСЫ И ПРОЕКТЫ</h1>
+          <h1 className="title">КЕЙСЫ И ПРОЕКТЫ</h1>
           <h2 className={portfolio.subtitle}>
             Портфолио студии по веб-дизайну, разработке, SEO-продвижению
           </h2>
@@ -108,7 +108,7 @@ const Portfolio: React.FC = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

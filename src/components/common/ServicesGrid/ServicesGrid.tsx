@@ -142,9 +142,9 @@ export const ServicesGrid = () => {
   const totalServices = filteredServices.length;
 
   return (
-    <div id="services" className={styles.services}>
+    <section id="services" className={styles.services}>
       <div className={styles.container}>
-        <h1 className={styles.title}>Наши услуги</h1>
+        <h1 className="title">Наши услуги</h1>
         <Input
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
@@ -172,6 +172,6 @@ export const ServicesGrid = () => {
           )} из ${totalServices}`}</p>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import styles from "./RequestSection.module.scss";
 import Modal from "@/components/ui/Modal/Modal";
 import Button from "@/components/ui/Button/Button";
+import ScrollAnimation from "@/components/ui/ScrollAnimation/ScrollAnimation";
 
 interface RequestProps {
   title?: string;
@@ -19,17 +20,19 @@ const RequestSection: React.FC<RequestProps> = ({
   const [showModal, setShowModal] = useState(false);
 
   return (
-    <div className={styles.request}>
-      <h3 className={styles.title}>{title}</h3>
-      <p className={styles.description}>{description}</p>
-      <Button
-        size="large"
-        variant="outlined"
-        onClick={() => setShowModal(true)}>
-        {buttonText}
-      </Button>
+    <section className={styles.request}>
+      <ScrollAnimation>
+        <h3 className={styles.title}>{title}</h3>
+        <p className={styles.description}>{description}</p>
+        <Button
+          size="large"
+          variant="outlined"
+          onClick={() => setShowModal(true)}>
+          {buttonText}
+        </Button>
+      </ScrollAnimation>
       <Modal showModal={showModal} setShowModal={setShowModal} />
-    </div>
+    </section>
   );
 };
 

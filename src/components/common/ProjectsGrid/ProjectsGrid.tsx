@@ -4,6 +4,7 @@ import React from "react";
 import { useRouter } from "next/navigation";
 import styles from "./ProjectsGrid.module.scss";
 import Button from "@/components/ui/Button/Button";
+import ScrollAnimation from "@/components/ui/ScrollAnimation/ScrollAnimation";
 
 const projects = [
   {
@@ -47,35 +48,35 @@ export const ProjectsGrid: React.FC = () => {
 
   return (
     <section className={styles.container}>
-      <div className={styles.grid}>
-        {projects.map((project) => (
-          <div
-            key={project.id}
-            className={styles.project}
-            style={{ backgroundImage: `url(${project.image})` }}
-          >
-            <div className={styles.info}>
-              <div className={styles.tags}>
-                {project.tags.map((tag) => (
-                  <div key={tag} className={styles.tag}>
-                    {tag}
-                  </div>
-                ))}
-              </div>
-              <div className={styles.actions}>
-                <p className={styles.time}>{project.time}</p>
-                <Button
-                  variant="outlined"
-                  size="large"
-                  onClick={() => handleViewProject(project.id)}
-                >
-                  Смотреть
-                </Button>
+      <ScrollAnimation scaleRange={[.95, 1]}>
+        <div className={styles.grid}>
+          {projects.map((project) => (
+            <div
+              key={project.id}
+              className={styles.project}
+              style={{ backgroundImage: `url(${project.image})` }}>
+              <div className={styles.info}>
+                <div className={styles.tags}>
+                  {project.tags.map((tag) => (
+                    <div key={tag} className={styles.tag}>
+                      {tag}
+                    </div>
+                  ))}
+                </div>
+                <div className={styles.actions}>
+                  <p className={styles.time}>{project.time}</p>
+                  <Button
+                    variant="outlined"
+                    size="large"
+                    onClick={() => handleViewProject(project.id)}>
+                    Смотреть
+                  </Button>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      </ScrollAnimation>
     </section>
   );
 };

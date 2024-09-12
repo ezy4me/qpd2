@@ -11,7 +11,7 @@ const About: React.FC = () => {
     <div className={styles.pageContainer}>
       <div className={styles.pageContent}>
         <div className={about.headerContainer}>
-          <h1 className={about.title}>СТУДИЯ QUALITY PRODUCT DESIGN</h1>
+          <h1 className="title">СТУДИЯ QUALITY PRODUCT DESIGN</h1>
           <h2 className={about.subtitle}>
             ДОБРО ПОЖАЛОВАТЬ В <span> QUALITY PRODUCT DESIGN</span> — СТУДИЮ,
             ГДЕ <span>СТРАСТЬ К ДИЗАЙНУ</span> И СТРЕМЛЕНИЕ К СОВЕРШЕНСТВУ

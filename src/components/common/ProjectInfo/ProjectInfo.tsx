@@ -7,12 +7,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
+import ScrollAnimation from "@/components/ui/ScrollAnimation/ScrollAnimation";
 
 const ProjectInfo: React.FC = () => {
   return (
     <div className={styles.projectInfo}>
+      <div className="title">INSPIRATION</div>
       <div className={styles.container}>
-        <div className={styles.title}>INSPIRATION</div>
         <div className={styles.body}>
           <div className={styles.technologies}>
             <div className={styles.technologiesItem}>REACT</div>
@@ -50,30 +51,31 @@ const ProjectInfo: React.FC = () => {
             поддерживать пользователей на их пути.
           </p>
         </div>
-
-        <div className={styles.projectImages}>
-          <Swiper
-            pagination={true}
-            modules={[Pagination]}
-            className={styles.mySwiper}>
-            <SwiperSlide
-              className={styles.projectImage}
-              style={{ backgroundImage: "url('/images/project-5.jfif')" }}
-            />
-            <SwiperSlide
-              className={styles.projectImage}
-              style={{ backgroundImage: "url('/images/project-2.jfif')" }}
-            />
-            <SwiperSlide
-              className={styles.projectImage}
-              style={{ backgroundImage: "url('/images/project-3.jfif')" }}
-            />
-            <SwiperSlide
-              className={styles.projectImage}
-              style={{ backgroundImage: "url('/images/project-4.jfif')" }}
-            />
-          </Swiper>
-        </div>
+        <ScrollAnimation>
+          <div className={styles.projectImages}>
+            <Swiper
+              pagination={true}
+              modules={[Pagination]}
+              className={styles.mySwiper}>
+              <SwiperSlide
+                className={styles.projectImage}
+                style={{ backgroundImage: "url('/images/project-5.jfif')" }}
+              />
+              <SwiperSlide
+                className={styles.projectImage}
+                style={{ backgroundImage: "url('/images/project-2.jfif')" }}
+              />
+              <SwiperSlide
+                className={styles.projectImage}
+                style={{ backgroundImage: "url('/images/project-3.jfif')" }}
+              />
+              <SwiperSlide
+                className={styles.projectImage}
+                style={{ backgroundImage: "url('/images/project-4.jfif')" }}
+              />
+            </Swiper>
+          </div>
+        </ScrollAnimation>
       </div>
     </div>
   );
