@@ -82,6 +82,10 @@
 }
 
 @media (max-width: 768px) {
+    .header {
+        padding: 20px 20px;
+    }
+
     .headerContainer {
         display: flex;
         justify-content: space-between;
@@ -96,5 +100,11 @@
 
     .socials {
         display: none;
+    }
+}
+
+@media (max-width: 400px) {
+    .header {
+        padding: 20px 10px;
     }
 }

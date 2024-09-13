@@ -48,7 +48,7 @@ export const ProjectsGrid: React.FC = () => {
 
   return (
     <section className={styles.container}>
-      <ScrollAnimation scaleRange={[.95, 1]}>
+      <ScrollAnimation scaleRange={[0.95, 1]} opacityRange={[0.95, 1]}>
         <div className={styles.grid}>
           {projects.map((project) => (
             <div
